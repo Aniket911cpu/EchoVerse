@@ -37,38 +37,38 @@ dependencies:
   anim_search_bar: ^2.0.2
   smooth_page_indicator: ^1.0.0+2
   provider: ^6.0.1
-  onesignal_flutter: ^3.5.1
+  onesignal_flutter: ^5.1.4
   firebase_core: ^2.10.0
   firebase_messaging: ^14.4.1
   firebase_auth: ^4.4.2
   google_sign_in: ^6.1.0
-  sign_in_with_apple: ^4.3.0
+  sign_in_with_apple: ^6.1.0
   crypto: ^3.0.2
   shared_preferences: ^2.0.9
   flutter_otp_text_field: ^1.1.0+2
   dotted_border: ^2.0.0+2
-  audio_video_progress_bar: ^1.0.1
-  http: ^0.13.4
+  audio_video_progress_bar: ^2.0.2
+  http: ^1.2.1
   fluttertoast: ^8.0.8
   country_codes: ^2.1.1
-  shimmer: ^2.0.0
-  webview_flutter: ^3.0.4
+  shimmer: ^3.0.0
+  webview_flutter: ^4.7.0
   flutter_rating_bar: ^4.0.0
   dio: ^4.0.6
-  google_fonts: ^4.0.3
+  google_fonts: ^6.2.1
   cached_network_image: ^3.2.3
   carousel_slider: ^4.2.1
   dio_logger: ^4.0.8+8
   smooth_star_rating_null_safety: ^1.0.4+2
-  progress_dialog_null_safe: ^1.0.7
+  progress_dialog_null_safe: ^3.0.0
   miniplayer: ^1.0.1
   just_audio_background: ^0.0.1-beta.9
   just_audio: ^0.9.31
-  flutter_locales: ^2.0.2
+  flutter_locales: ^3.0.1
   intl_phone_field: ^3.1.0
-  pinput: ^2.2.31
-  readmore: ^2.2.0
-  image_picker: ^0.8.7+3
+  pinput: ^4.0.0
+  readmore: ^3.0.0
+  image_picker: ^1.0.7
   path: ^1.8.2
   flutter_pagewise: ^2.0.4
   text_scroll: ^0.2.0
@@ -84,7 +84,7 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^2.0.0
+  flutter_lints: ^3.0.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
