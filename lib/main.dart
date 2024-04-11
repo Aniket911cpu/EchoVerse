@@ -1,125 +1,172 @@
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_locales/flutter_locales.dart';
+import 'package:just_audio_background/just_audio_background.dart';
+import 'package:onesignal_flutter/onesignal_flutter.dart';
+import 'package:provider/provider.dart';
+import 'package:radioapp/provider/addfavouriteprovider.dart';
+import 'package:radioapp/provider/allradioviewallprovider.dart';
+import 'package:radioapp/provider/artistviewallprovider.dart';
+import 'package:radioapp/provider/categoryviewallprovider.dart';
+import 'package:radioapp/provider/cityviewallprovider.dart';
+import 'package:radioapp/provider/favouriteprovider.dart';
+import 'package:radioapp/provider/generalprovider.dart';
+import 'package:radioapp/pages/splash.dart';
+import 'package:radioapp/provider/getradiobyartistprovider.dart';
+import 'package:radioapp/provider/getradiobycategoryprovider.dart';
+import 'package:radioapp/provider/getradiobycityprovider.dart';
+import 'package:radioapp/provider/getradiobylanguageprovider.dart';
+import 'package:radioapp/provider/homeprovider.dart';
+import 'package:radioapp/provider/languageprovider.dart';
+import 'package:radioapp/provider/languageviewallprovider.dart';
+import 'package:radioapp/provider/latestviewallprovider.dart';
+import 'package:radioapp/provider/notificationprovider.dart';
+import 'package:radioapp/provider/profileprovider.dart';
+import 'package:radioapp/provider/searchprovider.dart';
+import 'package:radioapp/provider/updateprofileprovider.dart';
+import 'package:radioapp/utils/color.dart';
+import 'package:radioapp/utils/constant.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  await Locales.init(['en', 'ar', 'hi']);
+
+  if (!kIsWeb) {
+    //Remove this method to stop OneSignal Debugging
+    OneSignal.shared.setLogLevel(OSLogLevel.verbose, OSLogLevel.none);
+    OneSignal.shared.setAppId(Constant.oneSignalAppId);
+    // The promptForPushNotificationsWithUserResponse function will show the iOS push notification prompt.
+    // We recommend removing the following code and instead using an In-App Message to prompt for notification permission
+    OneSignal.shared.promptUserForPushNotificationPermission().then((accepted) {
+      debugPrint("Accepted permission: ===> $accepted");
+    });
+    OneSignal.shared.setNotificationWillShowInForegroundHandler(
+        (OSNotificationReceivedEvent event) {
+      // Will be called whenever a notification is received in foreground
+      // Display Notification, pass null param for not displaying the notification
+      event.complete(event.notification);
+    });
+  }
+  // Set StatusBar Color And Navigation Color
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+      // Navigation bar color
+      systemNavigationBarColor: white,
+      // status bar color
+      statusBarColor: transparent,
+    ),
+  );
+  // Just Audio Player Background Service Set
+  await JustAudioBackground.init(
+      androidNotificationChannelId: 'com.ryanheise.bg_demo.channel.audio',
+      androidNotificationChannelName: 'Audio playback',
+      androidNotificationOngoing: true,
+      notificationColor: colorPrimaryDark,
+      androidResumeOnClick: true,
+      androidStopForegroundOnPause: true,
+      androidNotificationClickStartsActivity: true);
+
+/*--------------------------------- Temporary Unuseable Section---------------------------------------- */
+
+  // FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
+
+  // final FirebaseMessaging firebaseMessaging = FirebaseMessaging.instance;
+  // firebaseMessaging.requestPermission();
+
+  // firebaseMessaging.getToken().then((token) {
+  //   print('======> TOKEN: $token'); // Print the Token in Console
+  // });
+
+  // await FirebaseMessaging.instance.setForegroundNotificationPresentationOptions(
+  //   alert: true,
+  //   badge: true,
+  //   sound: true,
+  // );
+
+  //Awesome push notification
+  // AwesomeNotifications().initialize(null, [
+  //   NotificationChannel(
+  //       channelKey: 'Key1',
+  //       channelName: 'Proto Coders Point',
+  //       channelDescription: 'Notification Example',
+  //       playSound: true,
+  //       enableVibration: true,
+  //       defaultColor: const Color(0xFF9858DD),
+  //       ledColor: white,
+  //       enableLights: true)
+  // ]);
+
+  /*--------------------------------- Temporary Unuseable Section---------------------------------------- */
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]).whenComplete(() => runApp(
+        MultiProvider(
+          providers: [
+            ChangeNotifierProvider(create: (_) => GeneralProvider()),
+            ChangeNotifierProvider(create: (_) => LanguageProvider()),
+            ChangeNotifierProvider(create: (_) => HomeProvider()),
+            ChangeNotifierProvider(create: (_) => ProfileProvider()),
+            ChangeNotifierProvider(create: (_) => NotificationProvider()),
+            ChangeNotifierProvider(create: (_) => UpdateProfileProvider()),
+            ChangeNotifierProvider(create: (_) => SearchProvider()),
+            ChangeNotifierProvider(create: (_) => GetRadiobyArtistProvider()),
+            ChangeNotifierProvider(create: (_) => GetRadiobyCityProvider()),
+            ChangeNotifierProvider(create: (_) => GetRadiobyCategoryProvider()),
+            ChangeNotifierProvider(create: (_) => GetRadiobylanguageProvider()),
+            ChangeNotifierProvider(create: (_) => FavouriteProvider()),
+            ChangeNotifierProvider(create: (_) => AddFavouriteProvider()),
+            ChangeNotifierProvider(create: (_) => CityViewAllProvider()),
+            ChangeNotifierProvider(create: (_) => CategoryViewAllProvider()),
+            ChangeNotifierProvider(create: (_) => LanguageViewAllProvider()),
+            ChangeNotifierProvider(create: (_) => ArtistViewAllProvider()),
+            ChangeNotifierProvider(create: (_) => AllRadioViewAllProvider()),
+            ChangeNotifierProvider(create: (_) => LatestRadioViewAllProvider()),
+          ],
+          child: const MyApp(),
+        ),
+      ));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+    return LocaleBuilder(
+      builder: (locale) => MaterialApp(
+        localizationsDelegates: Locales.delegates,
+        supportedLocales: Locales.supportedLocales,
+        locale: locale,
+        debugShowCheckedModeBanner: false,
+        home: const Splash(),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
-}
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+/*--------------------------------- Temporary Unuseable Section---------------------------------------- */
 
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
+// Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+//   await Firebase.initializeApp();
+//   print('====THIS IS BACKGROUND======= : ${message.messageId}');
+//   log('FIREBASE BACKGROUND DATA LENGTH ${message.data.length}');
 
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
+//   //Awesome Notification
 
-  final String title;
+//   await AwesomeNotifications().createNotification(
+//     content: NotificationContent(
+//       id: 1,
+//       channelKey: 'Key1',
+//       title: message.data['title'].toString(),
+//       body: message.data['body'].toString(),
+//       bigPicture: message.data['mediaUrl'].toString(),
+//       notificationLayout: NotificationLayout.BigPicture,
+//     ),
+//   );
 
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
-    return Scaffold(
-      appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          //
-          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
-          // action in the IDE, or press "p" in the console), to see the
-          // wireframe for each widget.
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
-  }
+/*--------------------------------- Temporary Unuseable Section---------------------------------------- */
 }
