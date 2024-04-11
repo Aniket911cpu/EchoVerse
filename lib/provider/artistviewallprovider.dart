@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:radioapp/model/artistmodel.dart';
-import 'package:radioapp/webservice/apiservices.dart';
+import 'package:echoverse/model/artistmodel.dart';
+import 'package:echoverse/webservice/apiservices.dart';
 
 class ArtistViewAllProvider extends ChangeNotifier {
   ArtistModel artistModel = ArtistModel();

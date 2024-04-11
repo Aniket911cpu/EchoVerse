@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:radioapp/model/getradiobyartistmodel.dart';
-import 'package:radioapp/webservice/apiservices.dart';
+import 'package:echoverse/model/getradiobyartistmodel.dart';
+import 'package:echoverse/webservice/apiservices.dart';
 
 class GetRadiobyArtistProvider extends ChangeNotifier {
   GetradiobyartistModel getradiobyartistModel = GetradiobyartistModel();

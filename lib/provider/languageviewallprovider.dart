@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:radioapp/model/languagemodel.dart';
-import 'package:radioapp/webservice/apiservices.dart';
+import 'package:echoverse/model/languagemodel.dart';
+import 'package:echoverse/webservice/apiservices.dart';
 
 class LanguageViewAllProvider extends ChangeNotifier {
   LanguageModel languageModel = LanguageModel();

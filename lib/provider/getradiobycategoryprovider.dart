@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:radioapp/model/getradiobycategorymodel.dart';
-import 'package:radioapp/webservice/apiservices.dart';
+import 'package:echoverse/model/getradiobycategorymodel.dart';
+import 'package:echoverse/webservice/apiservices.dart';
 
 class GetRadiobyCategoryProvider extends ChangeNotifier {
   GetradiobycategoryModel getradiobycategoryModel = GetradiobycategoryModel();

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:radioapp/model/generalsettingmodel.dart';
-import 'package:radioapp/model/loginmodel.dart';
-import 'package:radioapp/webservice/apiservices.dart';
+import 'package:echoverse/model/generalsettingmodel.dart';
+import 'package:echoverse/model/loginmodel.dart';
+import 'package:echoverse/webservice/apiservices.dart';
 
 class GeneralProvider extends ChangeNotifier {
   GeneralsettingModel generalSettingModel = GeneralsettingModel();

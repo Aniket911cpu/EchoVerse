@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:radioapp/model/favouritelmodel.dart';
-import 'package:radioapp/webservice/apiservices.dart';
+import 'package:echoverse/model/favouritelmodel.dart';
+import 'package:echoverse/webservice/apiservices.dart';
 
 class FavouriteProvider extends ChangeNotifier {
   FavouriteModel favouriteModel = FavouriteModel();

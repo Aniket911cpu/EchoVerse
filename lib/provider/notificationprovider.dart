@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:radioapp/model/notificationlistmodel.dart';
-import 'package:radioapp/webservice/apiservices.dart';
+import 'package:echoverse/model/notificationlistmodel.dart';
+import 'package:echoverse/webservice/apiservices.dart';
 
 class NotificationProvider extends ChangeNotifier {
   NotificationModel notificationModel = NotificationModel();

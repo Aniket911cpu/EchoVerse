@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:provider/provider.dart';
-import 'package:radioapp/pages/home.dart';
-import 'package:radioapp/pages/musicdetails.dart';
-import 'package:radioapp/pages/nodata.dart';
-import 'package:radioapp/provider/searchprovider.dart';
-import 'package:radioapp/utils/color.dart';
-import 'package:radioapp/utils/constant.dart';
-import 'package:radioapp/utils/customwidget.dart';
-import 'package:radioapp/utils/musicmanager.dart';
-import 'package:radioapp/utils/sharedpref.dart';
-import 'package:radioapp/utils/utils.dart';
-import 'package:radioapp/widget/myimage.dart';
-import 'package:radioapp/widget/mynetworkimg.dart';
-import 'package:radioapp/widget/mytext.dart';
+import 'package:echoverse/pages/home.dart';
+import 'package:echoverse/pages/musicdetails.dart';
+import 'package:echoverse/pages/nodata.dart';
+import 'package:echoverse/provider/searchprovider.dart';
+import 'package:echoverse/utils/color.dart';
+import 'package:echoverse/utils/constant.dart';
+import 'package:echoverse/utils/customwidget.dart';
+import 'package:echoverse/utils/musicmanager.dart';
+import 'package:echoverse/utils/sharedpref.dart';
+import 'package:echoverse/utils/utils.dart';
+import 'package:echoverse/widget/myimage.dart';
+import 'package:echoverse/widget/mynetworkimg.dart';
+import 'package:echoverse/widget/mytext.dart';
 
 class Search extends StatefulWidget {
   const Search({super.key});

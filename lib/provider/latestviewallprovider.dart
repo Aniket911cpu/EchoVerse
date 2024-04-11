@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:radioapp/model/latestsongmodel.dart';
-import 'package:radioapp/webservice/apiservices.dart';
+import 'package:echoverse/model/latestsongmodel.dart';
+import 'package:echoverse/webservice/apiservices.dart';
 
 class LatestRadioViewAllProvider extends ChangeNotifier {
   LatestsongModel latestsongModel = LatestsongModel();

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:radioapp/model/categorymodel.dart';
-import 'package:radioapp/webservice/apiservices.dart';
+import 'package:echoverse/model/categorymodel.dart';
+import 'package:echoverse/webservice/apiservices.dart';
 
 class CategoryViewAllProvider extends ChangeNotifier {
   CategoryModel categoryModel = CategoryModel();

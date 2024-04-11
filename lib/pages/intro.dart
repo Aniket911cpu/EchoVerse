@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:radioapp/pages/selectlanguage.dart';
-import 'package:radioapp/utils/color.dart';
-import 'package:radioapp/utils/sharedpref.dart';
-import 'package:radioapp/widget/myimage.dart';
-import 'package:radioapp/widget/mytext.dart';
+import 'package:echoverse/pages/selectlanguage.dart';
+import 'package:echoverse/utils/color.dart';
+import 'package:echoverse/utils/sharedpref.dart';
+import 'package:echoverse/widget/myimage.dart';
+import 'package:echoverse/widget/mytext.dart';
 
 class Intro extends StatefulWidget {
   const Intro({super.key});

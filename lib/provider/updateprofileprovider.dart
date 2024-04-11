@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:radioapp/model/updateprofilemodel.dart';
-import 'package:radioapp/webservice/apiservices.dart';
+import 'package:echoverse/model/updateprofilemodel.dart';
+import 'package:echoverse/webservice/apiservices.dart';
 
 class UpdateProfileProvider extends ChangeNotifier {
   UpdateprofileModel updateprofileModel = UpdateprofileModel();

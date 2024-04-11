@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:radioapp/model/allsongmodel.dart';
-import 'package:radioapp/model/artistmodel.dart';
-import 'package:radioapp/model/citymodel.dart';
-import 'package:radioapp/model/favouritelmodel.dart';
-import 'package:radioapp/model/languagemodel.dart';
-import 'package:radioapp/model/latestsongmodel.dart';
-import 'package:radioapp/model/bannermodel.dart';
-import 'package:radioapp/model/categorymodel.dart';
-import 'package:radioapp/webservice/apiservices.dart';
+import 'package:echoverse/model/allsongmodel.dart';
+import 'package:echoverse/model/artistmodel.dart';
+import 'package:echoverse/model/citymodel.dart';
+import 'package:echoverse/model/favouritelmodel.dart';
+import 'package:echoverse/model/languagemodel.dart';
+import 'package:echoverse/model/latestsongmodel.dart';
+import 'package:echoverse/model/bannermodel.dart';
+import 'package:echoverse/model/categorymodel.dart';
+import 'package:echoverse/webservice/apiservices.dart';
 
 class HomeProvider extends ChangeNotifier {
   bool loading = false;

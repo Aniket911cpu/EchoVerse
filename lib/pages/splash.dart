@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:radioapp/pages/home.dart';
-import 'package:radioapp/pages/intro.dart';
-import 'package:radioapp/provider/generalprovider.dart';
-import 'package:radioapp/utils/sharedpref.dart';
-import 'package:radioapp/widget/myimage.dart';
+import 'package:echoverse/pages/home.dart';
+import 'package:echoverse/pages/intro.dart';
+import 'package:echoverse/provider/generalprovider.dart';
+import 'package:echoverse/utils/sharedpref.dart';
+import 'package:echoverse/widget/myimage.dart';
 
 class Splash extends StatefulWidget {
   const Splash({Key? key}) : super(key: key);

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:radioapp/model/allsongmodel.dart';
-import 'package:radioapp/webservice/apiservices.dart';
+import 'package:echoverse/model/allsongmodel.dart';
+import 'package:echoverse/webservice/apiservices.dart';
 
 class AllRadioViewAllProvider extends ChangeNotifier {
   AllsongModel allSongsModel = AllsongModel();

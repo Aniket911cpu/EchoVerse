@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:radioapp/model/getradiobylanguagemodel.dart';
-import 'package:radioapp/webservice/apiservices.dart';
+import 'package:echoverse/model/getradiobylanguagemodel.dart';
+import 'package:echoverse/webservice/apiservices.dart';
 
 class GetRadiobylanguageProvider extends ChangeNotifier {
   GetradiobylanguageModel getradiobylanguageModel = GetradiobylanguageModel();

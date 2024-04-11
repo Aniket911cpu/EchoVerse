@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:radioapp/utils/color.dart';
+import 'package:echoverse/utils/color.dart';
 import 'package:shimmer/shimmer.dart';
 
 class CustomWidget extends StatelessWidget {

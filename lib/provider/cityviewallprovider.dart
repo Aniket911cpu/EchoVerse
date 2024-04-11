@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:radioapp/model/citymodel.dart';
-import 'package:radioapp/webservice/apiservices.dart';
+import 'package:echoverse/model/citymodel.dart';
+import 'package:echoverse/webservice/apiservices.dart';
 
 class CityViewAllProvider extends ChangeNotifier {
   CityModel cityModel = CityModel();

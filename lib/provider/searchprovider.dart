@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:radioapp/model/searchmodel.dart';
-import 'package:radioapp/webservice/apiservices.dart';
+import 'package:echoverse/model/searchmodel.dart';
+import 'package:echoverse/webservice/apiservices.dart';
 
 class SearchProvider extends ChangeNotifier {
   SearchModel searchModel = SearchModel();

@@ -1,8 +1,8 @@
 import 'dart:developer';
 import 'package:just_audio/just_audio.dart';
-import 'package:radioapp/pages/home.dart';
-import 'package:radioapp/pages/musicdetails.dart';
-import 'package:radioapp/widget/musicutils.dart';
+import 'package:echoverse/pages/home.dart';
+import 'package:echoverse/pages/musicdetails.dart';
+import 'package:echoverse/widget/musicutils.dart';
 
 class MusicManager {
   late ConcatenatingAudioSource playlist;

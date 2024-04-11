@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:radioapp/utils/color.dart';
-import 'package:radioapp/widget/mytext.dart';
+import 'package:echoverse/utils/color.dart';
+import 'package:echoverse/widget/mytext.dart';
 import '../widget/myimage.dart';
 
 class NoData extends StatelessWidget {

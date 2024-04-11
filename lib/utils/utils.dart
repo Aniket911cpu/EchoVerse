@@ -5,10 +5,10 @@ import 'package:flutter_share/flutter_share.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:progress_dialog_null_safe/progress_dialog_null_safe.dart';
-import 'package:radioapp/utils/color.dart';
-import 'package:radioapp/utils/constant.dart';
-import 'package:radioapp/widget/myimage.dart';
-import 'package:radioapp/widget/mytext.dart';
+import 'package:echoverse/utils/color.dart';
+import 'package:echoverse/utils/constant.dart';
+import 'package:echoverse/widget/myimage.dart';
+import 'package:echoverse/widget/mytext.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Utils {

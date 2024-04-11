@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:radioapp/model/getradiobycitymodel.dart';
-import 'package:radioapp/webservice/apiservices.dart';
+import 'package:echoverse/model/getradiobycitymodel.dart';
+import 'package:echoverse/webservice/apiservices.dart';
 
 class GetRadiobyCityProvider extends ChangeNotifier {
   GetradiobycityModel getradiobycityModel = GetradiobycityModel();

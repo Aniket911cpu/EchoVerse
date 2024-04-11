@@ -2,13 +2,13 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:radioapp/pages/home.dart';
-import 'package:radioapp/provider/languageprovider.dart';
-import 'package:radioapp/utils/color.dart';
-import 'package:radioapp/utils/customwidget.dart';
-import 'package:radioapp/utils/sharedpref.dart';
-import 'package:radioapp/utils/utils.dart';
-import 'package:radioapp/widget/mytext.dart';
+import 'package:echoverse/pages/home.dart';
+import 'package:echoverse/provider/languageprovider.dart';
+import 'package:echoverse/utils/color.dart';
+import 'package:echoverse/utils/customwidget.dart';
+import 'package:echoverse/utils/sharedpref.dart';
+import 'package:echoverse/utils/utils.dart';
+import 'package:echoverse/widget/mytext.dart';
 
 class SelectLanguage extends StatefulWidget {
   const SelectLanguage({super.key});

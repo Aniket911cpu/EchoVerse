@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:radioapp/pages/editprofile.dart';
-import 'package:radioapp/provider/profileprovider.dart';
-import 'package:radioapp/utils/color.dart';
-import 'package:radioapp/utils/constant.dart';
-import 'package:radioapp/utils/sharedpref.dart';
-import 'package:radioapp/utils/utils.dart';
-import 'package:radioapp/widget/myappbar.dart';
-import 'package:radioapp/widget/myimage.dart';
-import 'package:radioapp/widget/mynetworkimg.dart';
-import 'package:radioapp/widget/mytext.dart';
+import 'package:echoverse/pages/editprofile.dart';
+import 'package:echoverse/provider/profileprovider.dart';
+import 'package:echoverse/utils/color.dart';
+import 'package:echoverse/utils/constant.dart';
+import 'package:echoverse/utils/sharedpref.dart';
+import 'package:echoverse/utils/utils.dart';
+import 'package:echoverse/widget/myappbar.dart';
+import 'package:echoverse/widget/myimage.dart';
+import 'package:echoverse/widget/mynetworkimg.dart';
+import 'package:echoverse/widget/mytext.dart';
 
 class Profile extends StatefulWidget {
   const Profile({Key? key}) : super(key: key);

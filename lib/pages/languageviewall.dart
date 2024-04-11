@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pagewise/flutter_pagewise.dart';
 import 'package:provider/provider.dart';
-import 'package:radioapp/pages/getradiobylanguage.dart';
-import 'package:radioapp/pages/nodata.dart';
-import 'package:radioapp/provider/languageviewallprovider.dart';
-import 'package:radioapp/utils/color.dart';
-import 'package:radioapp/utils/customwidget.dart';
-import 'package:radioapp/utils/utils.dart';
-import 'package:radioapp/widget/myappbar.dart';
-import 'package:radioapp/widget/mytext.dart';
+import 'package:echoverse/pages/getradiobylanguage.dart';
+import 'package:echoverse/pages/nodata.dart';
+import 'package:echoverse/provider/languageviewallprovider.dart';
+import 'package:echoverse/utils/color.dart';
+import 'package:echoverse/utils/customwidget.dart';
+import 'package:echoverse/utils/utils.dart';
+import 'package:echoverse/widget/myappbar.dart';
+import 'package:echoverse/widget/mytext.dart';
 
 import '../model/languagemodel.dart';
 

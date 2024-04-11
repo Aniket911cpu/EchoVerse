@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:radioapp/model/profilemodel.dart';
-import 'package:radioapp/webservice/apiservices.dart';
+import 'package:echoverse/model/profilemodel.dart';
+import 'package:echoverse/webservice/apiservices.dart';
 
 class ProfileProvider extends ChangeNotifier {
   ProfileModel profileModel = ProfileModel();
