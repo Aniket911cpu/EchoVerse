@@ -11,13 +11,12 @@ class MyImage extends StatelessWidget {
   // var alignment;
 
   MyImage(
-      {Key? key,
+      {super.key,
       required this.width,
       required this.height,
       required this.imagePath,
       this.color,
-      this.fit})
-      : super(key: key);
+      this.fit});
 
   @override
   Widget build(BuildContext context) {

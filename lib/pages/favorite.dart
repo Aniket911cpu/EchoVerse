@@ -330,15 +330,15 @@ class _FavouriteState extends State<Favourite> {
                         color: white,
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Row(
+                      child: const Row(
                         children: [
-                          const CustomWidget.circular(width: 65, height: 65),
-                          const SizedBox(width: 10),
+                          CustomWidget.circular(width: 65, height: 65),
+                          SizedBox(width: 10),
                           Expanded(
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
+                              children: [
                                 CustomWidget.roundrectborder(
                                     width: 100, height: 12),
                                 CustomWidget.roundrectborder(

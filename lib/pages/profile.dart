@@ -12,7 +12,7 @@ import 'package:echoverse/widget/mynetworkimg.dart';
 import 'package:echoverse/widget/mytext.dart';
 
 class Profile extends StatefulWidget {
-  const Profile({Key? key}) : super(key: key);
+  const Profile({super.key});
 
   @override
   // ignore: library_private_types_in_public_api

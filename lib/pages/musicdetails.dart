@@ -36,7 +36,7 @@ final MiniplayerController controller = MiniplayerController();
 
 class MusicDetails extends StatefulWidget {
   final bool ishomepage;
-  const MusicDetails({Key? key, required this.ishomepage}) : super(key: key);
+  const MusicDetails({super.key, required this.ishomepage});
 
   @override
   State<MusicDetails> createState() => _MusicDetailsState();

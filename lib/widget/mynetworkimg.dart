@@ -9,12 +9,11 @@ class MyNetworkImage extends StatelessWidget {
   dynamic fit;
 
   MyNetworkImage(
-      {Key? key,
+      {super.key,
       required this.imageUrl,
       required this.fit,
       this.imgHeight,
-      this.imgWidth})
-      : super(key: key);
+      this.imgWidth});
 
   @override
   Widget build(BuildContext context) {

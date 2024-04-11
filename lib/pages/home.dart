@@ -1171,11 +1171,11 @@ class _HomeState extends State<Home> {
   Widget categoryShimmer() {
     return Column(
       children: [
-        Padding(
-          padding: const EdgeInsets.all(15),
+        const Padding(
+          padding: EdgeInsets.all(15),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
+            children: [
               CustomWidget.roundrectborder(
                 height: 20,
                 width: 120,
@@ -1359,11 +1359,11 @@ class _HomeState extends State<Home> {
   Widget languageShimmer() {
     return Column(
       children: [
-        Padding(
-          padding: const EdgeInsets.all(15),
+        const Padding(
+          padding: EdgeInsets.all(15),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
+            children: [
               CustomWidget.roundrectborder(
                 height: 20,
                 width: 120,
@@ -1540,9 +1540,9 @@ class _HomeState extends State<Home> {
       child: Column(
         children: [
           SizedBox(height: MediaQuery.of(context).size.height * 0.03),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
+            children: [
               Padding(
                 padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
                 child: CustomWidget.roundrectborder(
@@ -1761,11 +1761,11 @@ class _HomeState extends State<Home> {
   Widget allRadioShimmer() {
     return Column(
       children: [
-        Padding(
-          padding: const EdgeInsets.all(15),
+        const Padding(
+          padding: EdgeInsets.all(15),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
+            children: [
               CustomWidget.roundrectborder(
                 height: 20,
                 width: 120,
@@ -1994,11 +1994,11 @@ class _HomeState extends State<Home> {
   Widget latestRadioShimmer() {
     return Column(
       children: [
-        Padding(
-          padding: const EdgeInsets.all(15),
+        const Padding(
+          padding: EdgeInsets.all(15),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
+            children: [
               CustomWidget.roundrectborder(
                 height: 20,
                 width: 120,
@@ -2198,9 +2198,9 @@ class _HomeState extends State<Home> {
   Widget artistShimmer() {
     return Column(
       children: [
-        Row(
+        const Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: const [
+          children: [
             Padding(
               padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
               child: CustomWidget.roundrectborder(
@@ -2424,11 +2424,11 @@ class _HomeState extends State<Home> {
   Widget favouriteRadioShimmer() {
     return Column(
       children: [
-        Padding(
-          padding: const EdgeInsets.all(15),
+        const Padding(
+          padding: EdgeInsets.all(15),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
+            children: [
               CustomWidget.roundrectborder(
                 height: 20,
                 width: 120,

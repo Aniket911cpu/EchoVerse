@@ -75,6 +75,7 @@ dependencies:
   url_launcher: ^6.1.10
   flutter_share: ^2.0.0
 
+  rxdart: any
 dev_dependencies:
   flutter_test:
     sdk: flutter

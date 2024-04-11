@@ -7,7 +7,7 @@ import 'package:echoverse/utils/sharedpref.dart';
 import 'package:echoverse/widget/myimage.dart';
 
 class Splash extends StatefulWidget {
-  const Splash({Key? key}) : super(key: key);
+  const Splash({super.key});
 
   @override
   State<Splash> createState() => SplashState();

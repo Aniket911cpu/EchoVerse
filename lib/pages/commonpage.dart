@@ -5,10 +5,10 @@ import 'package:webview_flutter/webview_flutter.dart';
 class CommonPage extends StatefulWidget {
   final String title, url;
   const CommonPage({
-    Key? key,
+    super.key,
     required this.title,
     required this.url,
-  }) : super(key: key);
+  });
 
   @override
   CommonPageState createState() => CommonPageState();

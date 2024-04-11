@@ -5,7 +5,7 @@ import '../widget/myimage.dart';
 
 class NoData extends StatelessWidget {
   final String text;
-  const NoData({Key? key, required this.text}) : super(key: key);
+  const NoData({super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {
